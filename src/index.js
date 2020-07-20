@@ -12,7 +12,8 @@ function main(el, service, imEntity, state, config) {
 		const loc = `${locatedOn.primaryIdentifier * 1}:${start}...${end}`;
 		el.innerHTML = `
 		<div class="rootContainer">
-			<iframe src="${config.jbrowseUrl}${encodeURIComponent(service.root)}/service/jbrowse/config/9606&amp;loc=${loc}&amp;tracks=HumanMine-9606-Gene" width="1130" height="600"></iframe>
+			<span class="chart-title">JBrowse Tool - ${data.symbol}</span>
+			<iframe src="${config.jbrowseUrl}${encodeURIComponent(service.root)}/service/jbrowse/config/9606&amp;loc=${loc}&amp;tracks=HumanMine-9606-Gene" width="1130" height="550"></iframe>
 		</div>`;
 	});
 }
