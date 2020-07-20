@@ -10,9 +10,10 @@ function main(el, service, imEntity, state, config) {
 	queryData(imEntity.Gene.value, service.root).then(data => {
 		const { end, start, locatedOn } = data.chromosomeLocation;
 		const loc = `${locatedOn.primaryIdentifier * 1}:${start}...${end}`;
-		el.innerHTML = `<iframe src="${config.jbrowseUrl}${encodeURIComponent(
-			service.root
-		)}/service/jbrowse/config/9606&amp;loc=${loc}&amp;tracks=HumanMine-9606-Gene" width="600" height="300"></iframe>`;
+		el.innerHTML = `
+		<div class="rootContainer">
+			<iframe src="${config.jbrowseUrl}${encodeURIComponent(service.root)}/service/jbrowse/config/9606&amp;loc=${loc}&amp;tracks=HumanMine-9606-Gene" width="1130" height="600"></iframe>
+		</div>`;
 	});
 }
 
