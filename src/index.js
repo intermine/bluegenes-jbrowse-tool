@@ -1,37 +1,23 @@
-// add any imports if needed, or write your script directly in this file.
-// const SomePackage = require('PackageName');
+const queryData = require('./query');
 
 // make sure to export main, with the signature
 function main(el, service, imEntity, state, config) {
-  if (!state) state = {};
+	if (!state) state = {};
 	if (!el || !service || !imEntity || !state || !config) {
 		throw new Error('Call main with correct signature');
 	}
-	// sample code here to convert the provided intermine object (e.g. perhaps
-	// an id) into an identifier the tool expects. e.g.:
-	// of course if your tool was built for intermine it might understand
-	// intermine ids already, but many others tools expect a gene symbol or
-	// protein accession, etc...
-	/**
-   * Example - you can delete this and replace with your own code *******
 
-    // protVista expects an accession, so convert intermine id to accession
-
-    var entity = imEntity.Protein;
-
-    var columnToConvert = config.columnMapping[entity.class][entity.format];
-    var accession = new imjs.Service(service)
-        .findById(entity.class, entity.value)
-        .then(function(response) {
-        //put some code here to initialise your tool.
-    });
-
-  */
-	el.innerHTML = `
+	queryData(imEntity.Gene.value, service.root).then(data => {
+		const { end, start, locatedOn } = data.chromosomeLocation;
+		const loc = `${locatedOn.primaryIdentifier * 1}:${start}...${end}`;
+		el.innerHTML = `
 		<div class="rootContainer">
-			<h1>Your Data Viz Here</h1>
-		</div>
-	`;
+			<span class="chart-title">JBrowse Tool</span>
+			<iframe src="${config.jbrowseUrl}${encodeURIComponent(
+			service.root
+		)}/service/jbrowse/config/9606&amp;loc=${loc}&amp;tracks=HumanMine-9606-Gene" width="1130" height="550"></iframe>
+		</div>`;
+	});
 }
 
 module.exports = { main };

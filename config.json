@@ -1,8 +1,6 @@
 {
-  "accepts": ["id"]  ,
-  "classes":
-    ["Gene"]
-  ,
+  "accepts": ["id"],
+  "classes": ["Gene"],
   "columnMapping": {
     "Gene": {
       "id": "primaryIdentifier"
@@ -19,5 +17,6 @@
     "human" :"Bluegenes JBrowse Tool",
     "cljs" :"bluegenesJBrowseTool"    
   },
-  "version": 2
+  "version": 2,
+  "jbrowseUrl" : "https://jbrowse.intermine.org/?data="
 }
