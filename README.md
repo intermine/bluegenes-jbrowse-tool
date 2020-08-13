@@ -1,6 +1,6 @@
-#  JBrowse Genome Browser
+#  Bluegenes JBrowse Tool
 
-JBrowse Genome Browser is a tool made for [BlueGenes](http://bluegenes.apps.intermine.org) following BlueGenes Tool API.
+Bluegenes JBrowse Tool is a tool made for [BlueGenes](http://bluegenes.apps.intermine.org) following BlueGenes Tool API.
 Add more description of your tool here! :)
 
 ## Licence
@@ -9,7 +9,7 @@ Add more description of your tool here! :)
 ### To set up locally for development
 
 1. Clone the repo
-2. `cd bluegenes-jbrowse` and then `npm install` to install dependencies.
+2. `cd bluegenes-jbrowse-tool` and then `npm install` to install dependencies.
 
 All of the editable source files for css and js are in `src`. To bundle for prod, run the following commands:
 

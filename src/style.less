@@ -1,4 +1,4 @@
-.bluegenesJBrowse {
+.bluegenesJBrowseTool {
   // put all your css classes inside this block. Keeping them
   // nested under the tool name prevents your styles from
   // leaking out and affecting other elements by accident.
@@ -10,8 +10,19 @@
 
 
   // this is just an example class for root div element, you may modify or delete it as per your usecase
-	.rootContainer {
-		border: 1px solid black;
-		padding: 20px;
-	}
+  .rootContainer {
+    border: 1px solid black;
+    padding: 20px;
+    height: 100%;
+    width: calc(100vw - 19rem);
+    .chart-title {
+      font-weight: 300;
+      font-size: 20px;
+      font-family: sans-serif;
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+    }
+  }
 }
+  

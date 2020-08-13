@@ -1,8 +1,6 @@
 {
-  "accepts": ["id"]  ,
-  "classes":
-    ["Gene"]
-  ,
+  "accepts": ["id"],
+  "classes": ["Gene"],
   "columnMapping": {
     "Gene": {
       "id": "primaryIdentifier"
@@ -16,8 +14,9 @@
     "js" : "dist/bundle.js"
   },
   "toolName" : {
-    "human" :"JBrowse Genome Browser",
-    "cljs" :"bluegenesJBrowse"
+    "human" :"Bluegenes JBrowse Tool",
+    "cljs" :"bluegenesJBrowseTool"    
   },
+  "version": 2,
   "jbrowseUrl" : "https://jbrowse.intermine.org/?data="
 }

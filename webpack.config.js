@@ -7,10 +7,15 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    library: "bluegenesJBrowse",
+    library: "bluegenesJBrowseTool",
     libraryTarget: "var"
   },
   optimization: {
     minimize: true
+  },
+  module: {
+    rules: [
+      
+    ]
   }
 };
