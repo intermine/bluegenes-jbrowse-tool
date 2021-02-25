@@ -14,7 +14,7 @@
     "js" : "dist/bundle.js"
   },
   "toolName" : {
-    "human" :"Bluegenes JBrowse Tool",
+    "human" :"JBrowse Genome Browser",
     "cljs" :"bluegenesJBrowseTool"    
   },
   "version": 2,
