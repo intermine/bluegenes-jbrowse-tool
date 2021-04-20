@@ -4,7 +4,8 @@ const query = geneId => ({
 		'symbol',
 		'chromosomeLocation.start',
 		'chromosomeLocation.end',
-		'chromosomeLocation.locatedOn.primaryIdentifier'
+		'chromosomeLocation.locatedOn.primaryIdentifier',
+		'organism.taxonId'
 	],
 	where: [
 		{
